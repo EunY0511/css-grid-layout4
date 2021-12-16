@@ -5,17 +5,40 @@ body {
   height: 100vh;
   margin: 0;
   background-color: rgb(236, 195, 179);
+  position: relative;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 40px 1200px 40px;
-  grid-template-rows: 40px 370px 50px 200px 80px 40px;
+  height: 100%;
+  grid-template-columns: 0.05fr 1fr 0.05fr;
+  grid-template-rows: 0.1fr 1fr 0.05fr 1fr 0.08fr 0.1fr;
   grid-auto-flow: column;
   padding: 5px;
   font-size: 25px;
   gap: 5px;
   position: relative;
+}
+
+.center__text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  font-size: 4em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  top: 31%;
+  right: 53%;
+  transform: translate(50%, 50%);
+}
+
+.border__icon {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  right: 3%;
+  transform: translate(50%, 50%);
 }
 
 .edge__top {
@@ -113,22 +136,6 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: rgb(255, 255, 255);
-}
-
-.center__text {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  z-index: 1;
-  font-size: 4em;
-  font-weight: 800;
-  color: rgb(255, 255, 255);
-  transform: translate(140%, 90%);
-}
-
-.border__icon {
-  z-index: 1;
-  position: relative;
 }
 
 .fa-comment {
